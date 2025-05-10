@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 06</title>
+    <link rel="stylesheet" href="estilo.css">
+     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <center>
+        <h1> Gerenciamento de invetarios </h1>
+        <input type="text" placeholder="digite o código do item" id="caixa_pesquisar">
+        <button id="btn_pesquisar">Pequisar🔍</button>
+    </center>
+
+    <center>
+        <br>   
+    <img src="carregando.gif" id="carregando" height="80" alt="gif"> 
+    </center>
+
+    <div id="caixa_conteudo"></div>
+
+    <div id="btn_mais">+</div>
+
+    <div id="tela_escura">
+        <div id="formulario_cadastro">
+            <button id="btn_fechar_form_cad" style="margin-left: 90%;" >❌</button>
+            <h1> cadastrar item</h1>
+            Codigo: <input type="text" id="caixa_codigo"> <br> <br>
+            Descrição: <input type="text" id="caixa_descricao"> <br> <br>    
+            Categoria: <input type="text" id="caixa_categoria"> <br> <br>
+            Setor: <select id="caixa_setor">
+                        <option> selecione </option>
+                        <option value="NAD">NAD</option>
+                        <option value="NEP">NEP</option>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Atendimento">Atendimento</option>
+                        <option value="Suporte">Suporte</option>                        
+                    </select> <br> <br>
+                    <button id="btn_cadastrar">cadastrar</button>
+        </div><!-- fim da div tela escura-->
+        
+        <div id="formulario_editar">
+            <button id="btn_fechar_form_editar" style="margin-left: 90%;" >❌</button>
+            <h1> cadastrar item</h1>
+            Codigo: <input type="text" id="caixa_codigo2"> <br> <br>
+            Descrição: <input type="text" id="caixa_descricao2"> <br> <br>    
+            Categoria: <input type="text" id="caixa_categoria2"> <br> <br>
+            Setor: <select id="caixa_setor2">
+                        <option> selecione </option>
+                        <option value="NAD">NAD</option>
+                        <option value="NEP">NEP</option>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Atendimento">Atendimento</option>
+                        <option value="Suporte">Suporte</option>                        
+                    </select> <br> <br>
+                    <button id="btn_salvar">Salvar</button>
+                    <button id="btn_deletar">Deletar</button>
+        </div>
+    </div><!-- fim da div tela escura-->
+
+    <script src="/funcoes.js"></script>
+</body>
+</html>
