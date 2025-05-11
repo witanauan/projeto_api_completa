@@ -61,7 +61,7 @@ body{
     align-items: center;
     justify-content: center;
 }
-#formulario_cadastro, #formulario_editar{
+#formulario_cadastro{
     background-color: white;
     width: 350px;
     height: 350px;
@@ -69,3 +69,34 @@ body{
     padding: 20px;
 }
 
+ #formulario_editar{
+    background-color: white;
+    width: 350px;
+    height: 400px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#formulario_cadastro input, #formulario_editar input{
+    width: 60%;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#formulario_cadastro button, #formulario_editar button{
+    background-color: lightskyblue;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+#formulario_cadastro #btn_fechar_form_cad:hover, #formulario_editar #btn_fechar_form_editar:hover{
+    background-color: red;
+    cursor: pointer;
+    scale: 1.2;
+}
+#formulario_cadastro #btn_cadastrar:hover, #formulario_editar #btn_deletar:hover, #formulario_editar #btn_atualizar:hover{
+     background-color: green;
+    cursor: pointer;
+    scale: 1.2;
+}

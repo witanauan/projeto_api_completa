@@ -5,7 +5,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// READ - Lista todos os inventários
+// GET - Lista todos os inventários
 app.get('/inventarios', (req, res) => {
     db.query('SELECT * FROM tb_inventarios', (erro, resultado) => {
         if (erro) return res.json({ mensagem: "Falha ao consultar inventários"+erro.message});
@@ -17,6 +17,15 @@ app.get('/inventarios', (req, res) => {
 app.get('/inventarios/:codigo', (req, res) => {
     const { codigo } = req.params;
     db.query('SELECT * FROM tb_inventarios WHERE codigo = ?', [codigo], (erro, resultado) => {
+        if (erro) return res.json({ mensagem: "Falha ao consultar inventário"+erro.message });
+        return res.json(resultado);
+    });
+});
+
+// GET - Lista todos os inventários por descirção
+app.get('/inventarios/nome/:descricao', (req, res) => {
+    const { descricao } = "%"+req.params+"%";
+    db.query('SELECT * FROM tb_inventarios WHERE descricao LIKE ?', [descricao], (erro, resultado) => {
         if (erro) return res.json({ mensagem: "Falha ao consultar inventário"+erro.message });
         return res.json(resultado);
     });
